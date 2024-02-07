@@ -24,10 +24,10 @@ public:
                 data[i][j] = static_cast<T>(other(i, j));
     }
 
-    ~Matrix(){};
+    ~Matrix(){};    
 
     T& operator()(unsigned, unsigned);
-    Matrix operator+(Matrix&);
+    Matrix operator+(Matrix);
     Matrix operator-(Matrix);
     Matrix operator*(const T &);
     Matrix operator/(const T&);
@@ -36,6 +36,7 @@ public:
     float det();    
     Matrix<float> inverse();
     Matrix& transpose();
+    Matrix dot(Matrix);
 
     template <class Type>
     friend std::ostream& operator<<(std::ostream& os, const Matrix<Type>& op);

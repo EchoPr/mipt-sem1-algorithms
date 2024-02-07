@@ -1,7 +1,8 @@
 #include <iostream>
 #include "src/matrix.hpp"
 
-int main(){
+int main()
+{
     Matrix<int> m1;
     Matrix<int> m2(3);
     Matrix<int> m3(1);
@@ -15,13 +16,17 @@ int main(){
     // m2.transpose();
     // std::cout << m2.inverse() << std::endl;
 
-    for(int i = 0; i < ROWS; i++)
-        m2(i, i) = i + 5;
-    std::cout << m2.inverse() << std::endl;
+    // for(int i = 0; i < ROWS; i++)
+    //     m2(i, i) = i + 5;
+    // std::cout << m2.inverse() << std::endl;
 
-    for(int i = 0; i < ROWS; i++)
-        m1(i, i) = 2;
-    std::cout << m1.inverse() << std::endl;
+    // for(int i = 0; i < ROWS; i++)
+    //     m1(i, i) = 2;
+    // std::cout << m1.inverse() << std::endl;
+
+    std::cout << m2 * m3 << std::endl;
+    std::cout << m2.dot(m3) << std::endl;
+    
 
 
 

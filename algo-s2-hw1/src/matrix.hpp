@@ -56,15 +56,14 @@ Matrix<T> Matrix<T>::operator*(Matrix<T> other)
     Matrix<T> tmp;
     for (int i = 0; i < ROWS; i++)
         for (int j = 0; j < COLS; j++){
-            for(int r = 0; r < 4; r++)
-                tmp(i, j) += data[i][r] * other(r, j);
+            tmp(i, j) = data[i][j] * other(i, j);
         }
 
     return tmp;
 }
 
 template <class T>
-Matrix<T> Matrix<T>::operator+(Matrix<T>& other)
+Matrix<T> Matrix<T>::operator+(Matrix<T> other)
 {
     Matrix<T> tmp;
     for (int i = 0; i < ROWS; i++)
@@ -86,6 +85,19 @@ Matrix<T> Matrix<T>::operator-(Matrix<T> other)
 }
 
 // Functions
+template <class T>
+Matrix<T> Matrix<T>::dot(Matrix<T> other)
+{
+    Matrix<T> tmp;
+    for (int i = 0; i < ROWS; i++)
+        for (int j = 0; j < COLS; j++){
+            for(int r = 0; r < 4; r++)
+                tmp(i, j) += data[i][r] * other(r, j);
+        }
+
+    return tmp;
+}
+
 int inversions(int (&comb)[], int n)
 {
     int ans = 0;
