@@ -8,7 +8,7 @@ To build a project use [CMake build system](https://cmake.org/)
 
 Simple using of term-by-term multiplication and matrix product
 
-\```c++
+```c++
 Matrix<int> m2(3);
 /*
     3 3 3
@@ -36,4 +36,4 @@ std::cout << m2.dot(m3) << std::endl;
     12 12 12
     12 12 12
 */
-\```
+```
