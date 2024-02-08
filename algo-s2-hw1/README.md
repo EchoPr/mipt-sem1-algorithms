@@ -1,6 +1,7 @@
 # Matrix 4x4
 ## To build
 Folder src contains a [source files](https://github.com/EchoPr/mipt-sem1-algorithms/tree/main/algo-s2-hw1/src) of library
+
 To build a project use [CMake build system](https://cmake.org/)
 
 ---
