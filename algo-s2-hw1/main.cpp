@@ -10,6 +10,7 @@ int main()
 
     // m2(0, 0) = 4;
     // m2(0, 3) = 4;
+    // std::cout << m2 + m3 - m1 << std::endl;
     // std::cout << m2 << std::endl;
     // std::cout << m2.transpose() << std::endl;
 

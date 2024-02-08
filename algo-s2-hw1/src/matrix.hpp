@@ -42,6 +42,9 @@ Matrix<T> Matrix<T>::operator*(const T& other)
 template <class T>
 Matrix<T> Matrix<T>::operator/(const T& other)
 {
+    if (other == 0)
+        throw std::runtime_error("Deviding by zero!");
+
     Matrix<T> tmp;
     for (int i = 0; i < ROWS; i++)
         for (int j = 0; j < COLS; j++)
@@ -98,7 +101,7 @@ Matrix<T> Matrix<T>::dot(Matrix<T> other)
     return tmp;
 }
 
-int inversions(int (&comb)[], int n)
+int inversions_perms(int (&comb)[], int n)
 {
     int ans = 0;
 
@@ -117,7 +120,7 @@ float Matrix<T>::det()
 
     int per[] = {0, 1, 2, 3};
     do{
-        int N = inversions(per, 4);
+        int N = inversions_perms(per, 4);
         int mult = 1;
         for (int i = 0; i < 4; i++)
             mult *= data[i][per[i]];
@@ -138,7 +141,6 @@ Matrix<T>& Matrix<T>::transpose()
     return *this;
 }
 
-#include <typeinfo>
 template <class T>
 Matrix<float> Matrix<T>::inverse()
 {

@@ -3,8 +3,6 @@
 
 #include <iostream>
 
-#define USHORT unsigned short
-
 #define ROWS 4
 #define COLS 4
 
