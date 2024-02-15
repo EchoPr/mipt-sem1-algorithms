@@ -31,7 +31,6 @@ public:
     template <class Type>
     friend std::ostream& operator<<(std::ostream& os, const Vec4<Type>& op);
     
-
 private:
     T data[ROWS];
 };
