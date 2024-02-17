@@ -5,9 +5,14 @@ include(CTest)
 enable_testing()
 
 add_executable(algo-s2-hw2 main.cpp
-    src/Mat4x4.hpp
-    src/Vec4.hpp
+       
 )
+
+set(HEADERS
+    src/Mat4x4.h
+    src/Vec4.h 
+)
+
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "src/mat_lib.hpp"
+#include "src/Vec4.h"
 
 
 int main(){
@@ -12,6 +12,6 @@ int main(){
     Matrix<float> m(1);
     std::cout << m << std::endl;
 
-    std::cout << dot(a, m) << std::endl;
-    std::cout << dot(m, a) << std::endl;
+    std::cout << a.dot(m) << std::endl;
+    std::cout << m.dot(a) << std::endl;
 }
