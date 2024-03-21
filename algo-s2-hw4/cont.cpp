@@ -101,8 +101,7 @@ int main() {
 	while (k + shift < n) {
 		del.push(a[shift]);
 		h.push(a[k + shift]);
-
-		// Может произойти ситуация, что придётся удалить много элементов, но в итоге амортизированно это будет порядка log(k)
+		
 		while (h.top() == del.top()) {
 			h.pop();
 			del.pop();
