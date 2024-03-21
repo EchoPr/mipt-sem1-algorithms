@@ -3,13 +3,12 @@
 
 #include <iostream>
 #include <algorithm>
+#include "Vec4.h"
 
 #define ROWS 4
 #define COLS 4
 #define DIM 4
 
-template <class T>
-class Vec4;
 
 template <class T>
 class Matrix

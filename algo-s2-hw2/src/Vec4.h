@@ -2,10 +2,12 @@
 #define VEC4_H
 
 #include <iostream>
-#include "Mat4x4.h"
 
 #define DIM 4
 
+
+template <class T>
+class Matrix;
 
 template <class T>
 class Vec4
